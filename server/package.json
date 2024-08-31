@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "MERN full stack project demonstrating StackOverflow functionality, featuring user authentication, question posting, answer submissions, and voting. Built with MongoDB, Express, React, and Node.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "stackoverflow",
+    "full-stack"
+  ],
+  "author": "Khushi Sharma",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.4",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  }
+}
