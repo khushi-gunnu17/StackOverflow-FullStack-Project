@@ -6,7 +6,6 @@ import axios from 'axios';
 import userroutes from './routes/user.js';
 import questionroutes from "./routes/Question.js";
 import answerroutes from "./routes/Answer.js";
-import uploadRoutes from './routes/upload.js';
 import notificationsRoutes from './routes/notifications.js';
 import http from 'http';
 import WebSocket, { WebSocketServer } from 'ws';
@@ -18,13 +17,11 @@ dotenv.config();
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-app.use("/uploads", express.static("uploads"));
 
 // Routes
 app.use("/user", userroutes);
 app.use("/questions", questionroutes);
 app.use("/answers", answerroutes);
-app.use('/upload-video', uploadRoutes);
 app.use('/notifications', notificationsRoutes);
 
 app.get('/', (req, res) => {

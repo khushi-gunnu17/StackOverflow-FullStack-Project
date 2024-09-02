@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import moment from "moment"
 import copy from "copy-to-clipboard"
 import upVote from '../../Assets/sort-up.svg'
@@ -9,8 +9,6 @@ import Displayanswer from './Displayanswer.jsx'
 import { Link, useNavigate, useLocation, useParams } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { deletequestion, votequestion, PostAnswer, sendCodeRequestNotification } from '../../action/question.js'
-import VideoPlayer from '../../Components/VideoPlayer/VideoPlayer.jsx'
-import videojs from 'video.js';
 
 
 const Questiondetails = () => {
@@ -26,35 +24,6 @@ const Questiondetails = () => {
     const user = useSelector((state) => state.currentuserreducer)
 
     const url="https://stackoverflow-fullstack-project.onrender.com"
-
-    const playerRef = useRef(null)
-    const videoLink = "http://localhost:5000/uploads/answers/01bf6ffd-06e7-4e96-abea-c1b94ca8c0d3/index.m3u8"
-
-    const VideoPlayerOptions = {
-        controls : true,
-        responsive : true,
-        fluid : true,
-        sources : [
-            {
-                src : videoLink,
-                type : "application/x-mpegURL"
-            }
-        ]
-    }
-
-
-    const handlePlayerReady = (player) => {
-        playerRef.current = player
-
-        player.on("waiting", () => {
-            videojs.log("Player is waiting.")
-        })
-
-        player.on("dispose", () => {
-            videojs.log("Player will dispose.")
-        })
-    }
-
 
     const handlepostans = (e, answerlength) => {
 
