@@ -130,25 +130,3 @@ export const deleteanswer = (id, answerid, noofanswers) => async(dispatch) => {
         console.log(error);
     }
 }
-
-
-
-
-export const uploadVideo = (formData, id) => async (dispatch) => {
-    try {
-        // Call the API to upload the video
-        const { data } = await api.uploadVideo(formData, id);
-
-        // Dispatch an action if needed
-        dispatch({
-            type: "UPLOAD_VIDEO",
-            payload: data
-        });
-
-        // Optionally refresh the question list or handle response
-        dispatch(fetchallquestion());
-        
-    } catch (error) {
-        console.log(error);
-    }
-};
