@@ -60,19 +60,6 @@ const Leftsidebar = ({slidein}) => {
                     </button>
 
                 </div>
-
-                {/* Chat Room Button */}
-                <button className='nav-btnn'>
-                    <NavLink to='/chat' className='side-nav-links' activeclassname='active' style={{ paddingLeft: "40px" }}>
-                        <p>Chat Room</p>
-                    </NavLink>
-                </button>
-
-                <button className='ask-ai-btn nav-btnn'>
-                    <NavLink to='/Chatbot' className='side-nav-links' activeclassname='active'>
-                        <p className='text'>Ask AI</p>
-                    </NavLink>
-                </button>
                 
             </nav>
         </div>

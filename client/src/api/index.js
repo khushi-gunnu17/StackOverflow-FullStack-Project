@@ -45,11 +45,3 @@ export const votequestion = (id, value, userid) => API.patch(`/questions/vote/${
 
 export const postanswer = (id, noofanswers, answerbody, useranswered, userid) => API.patch(`answers/post/${id}`, {noofanswers, answerbody, useranswered, userid})
 export const deleteanswer = (id, answerid, noofanswers) => API.patch(`/answers/delete/${id}`, {answerid, noofanswers})
-
-
-
-export const uploadVideo = (formData, id) => API.post(`/questions/${id}/uploadvideo`, formData, {
-    headers: {
-        "Content-Type": "multipart/form-data"
-    }
-});

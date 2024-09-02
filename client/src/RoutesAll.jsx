@@ -8,8 +8,7 @@ import Displayquestion from './pages/Questions/Displayquestion.jsx'
 import Tags from './pages/Tags/Tags.jsx'
 import Users from './pages/Users/Users.jsx'
 import Userprofile from './pages/Userprofile/Userprofile.jsx'
-import ChatRoom from './pages/ChatRoom/ChatRoom.jsx'
-import Chatbot from './pages/ChatBot/Chatbot.jsx'
+
 
 function RoutesAll({slidein, handleslidein}) {
     return (
@@ -22,8 +21,6 @@ function RoutesAll({slidein, handleslidein}) {
            <Route path='/Tags' element={<Tags slidein={slidein} handleslidein={handleslidein}/>} /> 
            <Route path='/Users' element={<Users slidein={slidein} handleslidein={handleslidein}/>} /> 
            <Route path='/Users/:id' element={<Userprofile slidein={slidein} handleslidein={handleslidein}/>} /> 
-           <Route path='/Chatbot' element={<Chatbot slidein={slidein} handleslidein={handleslidein}/>} /> 
-           <Route path='/chat' element={<ChatRoom slidein={slidein} handleslidein={handleslidein}/>} /> 
         </Routes>
     )
 }
